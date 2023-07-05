@@ -28,6 +28,10 @@ body{
     font-family: 'roboto', sans-serif;
 }
 
+main{
+    margin:1rem;
+}
+
 .navegacion-pokemones {
     background-image: url("https://assets.pokemon.com/static2/_ui/img/chrome/body_gray_bg.png");
     background-color: #fff0f2;
@@ -46,16 +50,15 @@ body{
 .imagen-pokemon {
     background-color: #F2F2F2;
     border: 1px solid black;
-    width: 95%;
+    width: 100%;
     color: #000000;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 0.8rem;
 }
 
 .imagen-pokemon img{
-    width: 30%;
+    width: 20%;
 }
 
 .tipopokemonfuego{
@@ -100,13 +103,36 @@ body{
     color: white;
 }
 
-
 .navegacion-izquierda{
-    width: 100px;
+    width: 200px;    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
+.navegacion-central{
+    width: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.navegacion-central input{
+    width: 100px;
+}
+
+.navegacion-central button{
+    margin: 10px;
+}
+
+.navegacion-central span{
+    color: white;
 }
 
 .navegacion-derecha{
-    width: 100px;
+    width: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
 }

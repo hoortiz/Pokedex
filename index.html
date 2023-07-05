@@ -23,13 +23,18 @@
       <section>
         <div class="navegacion-pokemones">
           <div class="navegacion-izquierda">
-            <button class="btn btn-basic navbar-btn" onclick="pintarpokemonanterior();">Anterior</button>
+            <button class="btn btn-basic" onclick="pintarpokemonanterior();">Anterior</button>
+          </div>
+          <div class="navegacion-central">
+            <span>Id Pokemon:&#160;&#160;&#160;</span><input type="number" id="idbuscadorpokemon" size="5">
+            <span><button class="btn btn-warning btn-xs" onclick="buscarpokemon();">Buscar</button></span>
           </div>
           <div class="navegacion-derecha">
-            <button class="btn btn-basic navbar-btn" onclick="pintarpokemonsiguiente();">Siguiente</button>
+            <button class="btn btn-basic" onclick="pintarpokemonsiguiente();">Siguiente</button>
           </div>
         </div>
       </section>
+      <br>
       <section id="contenedorpokemon" class="list-group">   
       </section>
       </main>
