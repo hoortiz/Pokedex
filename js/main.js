@@ -9,13 +9,33 @@ let nombrepoquemon = responsoinfopoquemon["name"];
 let alturapoquemon = responsoinfopoquemon["height"];
 let pesopoquemon = responsoinfopoquemon["weight"];
 let tipospoquemon = responsoinfopoquemon["types"];
+let estadisticaspoquemon = responsoinfopoquemon["stats"];
+let htmlestadisticaspokemon = "";
 
+for(i=0;i<estadisticaspoquemon.length;i++){
 
-contenedorpoquemon.innerHTML = "<div class=\"imagen-pokemon\"><img class=\"img-rounded\" width=200 src=\""+urlimagenpoquemon+"\"></div><br>";
-contenedorpoquemon.innerHTML = contenedorpoquemon.innerHTML+"<span class=\"list-group-item\"><b>ID: <\/b>"+idpokemonapintar+"</span><br>";
-contenedorpoquemon.innerHTML = contenedorpoquemon.innerHTML+"<span class=\"list-group-item\"><b>Nombre: <\/b>"+nombrepoquemon+"</span><br>";
-contenedorpoquemon.innerHTML = contenedorpoquemon.innerHTML+"<span class=\"list-group-item\"><b>Altura: <\/b>"+alturapoquemon+"</span><br>";
-contenedorpoquemon.innerHTML = contenedorpoquemon.innerHTML+"<span class=\"list-group-item\"><b>Peso: <\/b>"+pesopoquemon+"</span><br>";
+  let estadisticapoquemon = estadisticaspoquemon[i];
+  let nombreestadisticapoquemon = estadisticapoquemon["stat"]["name"];
+  let baseestadisticapoquemon = estadisticapoquemon["base_stat"];
+  htmlestadisticaspokemon += "<div class=\"estadisticapokemon\" style=\"height:"+baseestadisticapoquemon+"px;\"><a>"+nombreestadisticapoquemon+"</a></div>";
+}
+
+let htmlimagenestadisticaspokemons = "";
+
+htmlimagenestadisticaspokemons = "<div class=\"imagen-estadisticas\">";
+htmlimagenestadisticaspokemons += "<div class=\"imagen-pokemon\"><img class=\"img-rounded\" width=200 src=\""+urlimagenpoquemon+"\"></div><br>";
+htmlimagenestadisticaspokemons += "<span class=\"list-group-item\"><b>Estadisticas<\/b></span><br>";
+htmlimagenestadisticaspokemons += "<div class=\"estadisticas\">";
+htmlimagenestadisticaspokemons += htmlestadisticaspokemon;
+htmlimagenestadisticaspokemons += "</div>";
+htmlimagenestadisticaspokemons += "</div><br>";
+
+contenedorpoquemon.innerHTML = htmlimagenestadisticaspokemons;
+
+contenedorpoquemon.innerHTML += "<span class=\"list-group-item\"><b>ID: <\/b>"+idpokemonapintar+"</span><br>";
+contenedorpoquemon.innerHTML += "<span class=\"list-group-item\"><b>Nombre: <\/b>"+nombrepoquemon+"</span><br>";
+contenedorpoquemon.innerHTML += "<span class=\"list-group-item\"><b>Altura: <\/b>"+alturapoquemon+"</span><br>";
+contenedorpoquemon.innerHTML += "<span class=\"list-group-item\"><b>Peso: <\/b>"+pesopoquemon+"</span><br>";
 
 let tipopoquemon = "";
 let htmltipospokemon = "<div class=\"list-group-item\"><b>Tipo:<\/b><br><br>";
@@ -45,12 +65,9 @@ for(i=0;i<tipospoquemon.length;i++){
   classtipopokemon="";
 }
 
-console.log(responsoinfopoquemon["stats"]);
-
-htmltipospokemon += "</div>";
-
-
+htmltipospokemon += "</div><br>";
 contenedorpoquemon.innerHTML += htmltipospokemon;
+
 }
 
 async function obtenerinfopoquemon(idpoquemon){
