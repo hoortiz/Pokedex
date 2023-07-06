@@ -10,6 +10,7 @@ let alturapoquemon = responsoinfopoquemon["height"];
 let pesopoquemon = responsoinfopoquemon["weight"];
 let tipospoquemon = responsoinfopoquemon["types"];
 
+
 contenedorpoquemon.innerHTML = "<div class=\"imagen-pokemon\"><img class=\"img-rounded\" width=200 src=\""+urlimagenpoquemon+"\"></div><br>";
 contenedorpoquemon.innerHTML = contenedorpoquemon.innerHTML+"<span class=\"list-group-item\"><b>ID: <\/b>"+idpokemonapintar+"</span><br>";
 contenedorpoquemon.innerHTML = contenedorpoquemon.innerHTML+"<span class=\"list-group-item\"><b>Nombre: <\/b>"+nombrepoquemon+"</span><br>";
@@ -43,6 +44,8 @@ for(i=0;i<tipospoquemon.length;i++){
   htmltipospokemon += "<span class=\"list-group-item "+classtipopokemon+"\">"+tipopoquemon+"</span><br>";
   classtipopokemon="";
 }
+
+console.log(responsoinfopoquemon["stats"]);
 
 htmltipospokemon += "</div>";
 
