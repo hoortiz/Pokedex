@@ -17,17 +17,16 @@ for(i=0;i<estadisticaspoquemon.length;i++){
   let estadisticapoquemon = estadisticaspoquemon[i];
   let nombreestadisticapoquemon = estadisticapoquemon["stat"]["name"];
   let baseestadisticapoquemon = estadisticapoquemon["base_stat"];
-  htmlestadisticaspokemon += "<div class=\"estadisticapokemon\" style=\"height:"+baseestadisticapoquemon+"px;\"><a>"+nombreestadisticapoquemon+"</a></div>";
+  htmlestadisticaspokemon += "<div class=\"estadisticapokemon\" style=\"height:"+baseestadisticapoquemon+"px;\"><span>"+nombreestadisticapoquemon+"</span></div>";
 }
 
 let htmlimagenestadisticaspokemons = "";
 
-htmlimagenestadisticaspokemons = "<div class=\"imagen-estadisticas\">";
-htmlimagenestadisticaspokemons += "<div class=\"imagen-pokemon\"><img class=\"img-rounded\" width=200 src=\""+urlimagenpoquemon+"\"></div><br>";
-htmlimagenestadisticaspokemons += "<span class=\"list-group-item\"><b>Estadisticas<\/b></span><br>";
+htmlimagenestadisticaspokemons = "<div class=\"imagen-pokemon\"><img class=\"img-rounded\" width=200 src=\""+urlimagenpoquemon+"\"></div><br>";
+htmlimagenestadisticaspokemons += "<div class=\"imagen-estadisticas\">";
+htmlimagenestadisticaspokemons += "<span class=\"list-group-item\"><div class=\"tituloestadisticas\"><b>Estadisticas<\/b></div></span>";
 htmlimagenestadisticaspokemons += "<div class=\"estadisticas\">";
 htmlimagenestadisticaspokemons += htmlestadisticaspokemon;
-htmlimagenestadisticaspokemons += "</div>";
 htmlimagenestadisticaspokemons += "</div><br>";
 
 contenedorpoquemon.innerHTML = htmlimagenestadisticaspokemons;

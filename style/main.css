@@ -54,8 +54,9 @@ main{
 
 }
 
-.imagen-estadisticas{
-    /*display: flex;*/
+.tituloestadisticas{
+    display: flex;
+    justify-content: center;
 }
 
 .imagen-pokemon {
@@ -85,17 +86,18 @@ main{
 }
 
 .estadisticapokemon{
-    background-color: #F2C3F2;
-    border: 1px solid red;
+    background-color: #FFCE31;
+    border: 1px solid #2C2E9A;
     margin: 0.5rem;
     width: 10rem;
     display: flex;
     justify-content: center;
     align-items: end;
+    color: #2C2E9A;
 }
 
 .estadisticapokemon:hover{
-    border: 4px solid red;
+    border: 4px solid #2C2E9A;
 
 }
 
